@@ -1,0 +1,3 @@
+displayName = Schnaver
+author = Strgamer
+version = 0.1
