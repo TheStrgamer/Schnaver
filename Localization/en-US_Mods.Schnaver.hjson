@@ -3,17 +3,22 @@
 Items: {
 	BladeOfApe: {
 		DisplayName: Blade Of Ape
-		Tooltip: ""
+		Tooltip: "A blade crafted by the wisest monkey"
 	}
 
 	Teem: {
 		DisplayName: Teem
-		Tooltip: ""
+		Tooltip: "A resource valued by all teams"
 	}
 
 	CoreJava: {
 		DisplayName: Core Java
-		Tooltip: ""
+		Tooltip: "A book explaining the ins and outs of the coding languag Java. Not the best, but usable"
+	}
+
+	ZahardRing: {
+		DisplayName: Zahard Ring
+		Tooltip: "The ring made by the king of the tower, gives extra health and defense, and boosts health regen."
 	}
 }
 
@@ -23,19 +28,19 @@ NPCs: {
 
 		TownNPCMood: {
 			Content: I am content.
-			NoHome: I hate not having a home.
-			FarFromHome: I am too far from home.
-			LoveSpace: I love having so much space.
-			DislikeCrowded: I dislike how crowded I am.
-			HateCrowded: I hate how crowded I am.
-			LoveBiome: I love {BiomeName}.
-			LikeBiome: I like {BiomeName}.
-			DislikeBiome: I dislike {BiomeName}.
-			HateBiome: I hate {BiomeName}.
+			NoHome: What, am i supposed to work from a basement?.
+			FarFromHome: How do i get back to my house.
+			LoveSpace: I like having all this space.
+			DislikeCrowded: There are too many people around.
+			HateCrowded: Why are there so many people, where is Skeletron when you need him?.
+			LoveBiome: I do love {BiomeName}.
+			LikeBiome: I must say, i do like {BiomeName}.
+			DislikeBiome: I dislike {BiomeName}, could you consider a new place?.
+			HateBiome: I hate {BiomeName}, get me out of here.
 			LoveNPC: I love {NPCName}.
 			LikeNPC: I like {NPCName}.
 			DislikeNPC: I dislike {NPCName}.
-			HateNPC: I hate {NPCName}.
+			HateNPC: I hate {NPCName}, why are they here.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
 		}
