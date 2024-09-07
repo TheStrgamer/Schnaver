@@ -27,7 +27,7 @@ namespace Schnaver.NPCs
             .SetBiomeAffection<CrimsonBiome>(AffectionLevel.Dislike)
             .SetBiomeAffection<HallowBiome>(AffectionLevel.Like)
             .SetBiomeAffection<DesertBiome>(AffectionLevel.Dislike)
-            .SetBiomeAffection<SnowBiome>(AffectionLevel.Like)
+            .SetBiomeAffection<SnowBiome>(AffectionLevel.Love)
             .SetBiomeAffection<JungleBiome>(AffectionLevel.Love)
             .SetBiomeAffection<OceanBiome>(AffectionLevel.Like)
             .SetBiomeAffection<UndergroundBiome>(AffectionLevel.Like)
@@ -70,7 +70,7 @@ namespace Schnaver.NPCs
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs) {
-            return Main.hardMode; // Returns true if the Wall of Flesh has been defeated
+            return NPC.downedBoss1;
         }
 
         public override List<string> SetNPCNameList()
@@ -100,10 +100,15 @@ namespace Schnaver.NPCs
                 .Add(ItemID.EndurancePotion)
                 .Add(ItemID.RegenerationPotion)
                 .Add(ItemID.SwiftnessPotion)
-                .Add(ItemID.WrathPotion)
-                .Add(ItemID.CrystalSerpent)
+                .Add(ItemID.WrathPotion);
+
+
+            if (Main.hardMode)
+            {
+                npcShop.Add(ItemID.CrystalSerpent)
                 .Add(ItemID.TerrasparkBoots);
 
+            }
             npcShop.Register();
         }
 
@@ -118,13 +123,21 @@ namespace Schnaver.NPCs
         {
             WeightedRandom<string> chat = new WeightedRandom<string>();
 
-            chat.Add(Language.GetTextValue("Do you like Java?"));
+            chat.Add(Language.GetTextValue("That massive eye was creepy"));
             chat.Add(Language.GetTextValue("This place is a lot weirder than Bergen"));
             chat.Add(Language.GetTextValue("Terraria is my favorite game"));
             chat.Add(Language.GetTextValue("Hello " + Environment.UserName));
             chat.Add(Language.GetTextValue("I never met someone named " + Environment.UserName + " before"));
             chat.Add(Language.GetTextValue("Where is the 3D printer?"));
             chat.Add(Language.GetTextValue("Why is my house not better?"));
+
+            if (Main.LocalPlayer.ZoneJungle) {chat.Add(Language.GetTextValue("I love the jungle, just wish there were monkeys here"));}
+            if (Main.LocalPlayer.ZoneSnow) {chat.Add(Language.GetTextValue("I love the snow, reminds me of home"));}
+            if (Main.LocalPlayer.ZoneDesert) {chat.Add(Language.GetTextValue("Too hot here, Kill the sun or something"));}
+            if (Main.LocalPlayer.ZoneBeach) {chat.Add(Language.GetTextValue("The beach is pretty nice"));}
+            if (Main.LocalPlayer.ZoneDungeon) {chat.Add(Language.GetTextValue("Why are we in a dungeon?"));}
+            if (Main.LocalPlayer.ZoneUnderworldHeight) {chat.Add(Language.GetTextValue("Why are we down here?"));}
+            if (Main.LocalPlayer.ZoneGlowshroom) {chat.Add(Language.GetTextValue("Is the mushroom man here?"));}
 
             return chat.Get();
         }
