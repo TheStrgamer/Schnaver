@@ -9,6 +9,7 @@ using Terraria.Utilities;
 using Terraria.Localization;
 using System;
 using Schnaver.Items.Weapons;
+using Schnaver.Items.Accessories;
 
 
 namespace Schnaver.NPCs
@@ -96,6 +97,7 @@ namespace Schnaver.NPCs
         {
             var npcShop = new NPCShop(Type, shopName)
                 .Add<BladeOfApe>()
+                .Add<ZahardRing>()
                 .Add(ItemID.IronskinPotion)
                 .Add(ItemID.EndurancePotion)
                 .Add(ItemID.RegenerationPotion)

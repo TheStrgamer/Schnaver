@@ -3,22 +3,22 @@
 Items: {
 	BladeOfApe: {
 		DisplayName: Blade Of Ape
-		Tooltip: "A blade crafted by the wisest monkey"
+		Tooltip: A blade crafted by the wisest monkey
 	}
 
 	Teem: {
 		DisplayName: Teem
-		Tooltip: "A resource valued by all teams"
+		Tooltip: A resource valued by all teams
 	}
 
 	CoreJava: {
 		DisplayName: Core Java
-		Tooltip: "A book explaining the ins and outs of the coding languag Java. Not the best, but usable"
+		Tooltip: A book explaining the ins and outs of the coding languag Java. Not the best, but usable
 	}
 
 	ZahardRing: {
 		DisplayName: Zahard Ring
-		Tooltip: "The ring made by the king of the tower, gives extra health and defense, and boosts health regen."
+		Tooltip: The ring made by the king of the tower, gives extra health and defense, and boosts health regen.
 	}
 }
 
