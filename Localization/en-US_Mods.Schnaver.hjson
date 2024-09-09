@@ -20,6 +20,11 @@ Items: {
 		DisplayName: Zahard Ring
 		Tooltip: The ring made by the king of the tower, gives extra health and defense, and boosts health regen.
 	}
+
+	SchnaBlaster: {
+		DisplayName: Schna Blaster
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -52,4 +57,5 @@ NPCs: {
 Projectiles: {
 	SyntaxError.DisplayName: Syntax Error
 	Teem_Blast.DisplayName: Teem_ Blast
+	SchnaBlast.DisplayName: Schna Blast
 }
